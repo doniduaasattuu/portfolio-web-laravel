@@ -17,3 +17,5 @@ use PHPUnit\Framework\TestStatus\Risky;
 Route::get('/', [App\Http\Controllers\HomeController::class, "home"]);
 
 Route::post("/form", [App\Http\Controllers\MessageController::class, "form"]);
+
+Route::get("/ikiae", [App\Http\Controllers\IkiaeController::class, "home"]);
