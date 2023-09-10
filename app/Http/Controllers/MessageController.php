@@ -20,7 +20,7 @@ class MessageController extends Controller
         $time = Carbon::now()->timezone("Asia/Jakarta");
 
 
-        $messageResult = $time->toDateTimeString() .  "\n\nName : $name" . "\n" . "Email : $email" . "\n" . "Message : $message";
+        $messageResult = $time->toDateTimeString() . "\n\nName : $name" . "\n" . "Email : $email" . "\n" . "Message : $message";
 
         $response = Telegram::sendMessage([
             'chat_id' => '@donidarmawanportfolioweb',
