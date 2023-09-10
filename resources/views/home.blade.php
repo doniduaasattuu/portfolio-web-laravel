@@ -19,18 +19,12 @@
 
 <body>
     <!-- NAVBAR SECTION START -->
-    <!-- <nav id="navbar">
-    <div class="container">
-
-    </div>
-  </nav> -->
-
     <nav>
         <div class="blur">
         </div>
         <div class="container">
             <div class="nav-wrapper">
-                <div class="logo">Doni Darmawan</div>
+                <div class="logo"><a href="/">Doni Darmawan</a></div>
                 <span class="hamburger"><img src="storage/dist/img/hamburger.png" alt="Menu"></span>
 
                 <ul class="menu none">
@@ -238,7 +232,7 @@
         <div class="comtainer">
             <!-- <form action="mailto:doni.duaasattuu@gmail.com"> -->
             <form action="/form" method="post">
-                {@csrf}
+                @csrf
                 <div class="contact-wrapper">
                     <h3>Contact</h3>
                     <h2>Contact Me</h2>
@@ -383,6 +377,11 @@
             }
         }
     </script>
+    @isset($success)
+    <script>
+        alert("Your'e message successfully sent")
+    </script>
+    @endisset
 </body>
 
 </html>
